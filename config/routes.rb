@@ -1,4 +1,19 @@
 MyApp::Application.routes.draw do
+
+  get "users/new"
+
+  match '/signup',   :to => 'users#new'
+  match '/contact', :to => 'pages#contact'
+  match '/about',   :to => 'pages#about'
+  match '/help',    :to => 'pages#help'
+ 
+  # could use match '/', :to => 'pages/home' or  set root to
+
+  root :to => 'pages#home'
+
+  # match auto create named routed give also root_path => '/'
+  # and             root_url  => 'http://localhost:3000/'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
