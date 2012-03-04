@@ -8,16 +8,17 @@ gem 'gravatar_image_tag'
 
 group :development, :test do
 	gem 'sqlite3'
+	gem 'rspec-rails'
 end
 
 group :production, :test do
 	gem 'pg'
 end
 
-group :development do
-	gem 'rspec-rails'
+#group :development do
+  #gem 'rspec-rails'
 	
-end	
+#end	
 
 group :test do
 	gem 'rspec-rails'
